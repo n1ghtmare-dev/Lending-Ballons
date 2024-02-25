@@ -29,16 +29,35 @@ body
     font-family: "Lato", sans-serif
     font-weight: 400
     color: $color-gray
-    font-size: 1.6rem
+    font-size: $font-size-paragraph
     letter-spacing: .2rem
 
 .title-secondary
-    font-size: 3.6rem
+    text-align: center
+    display: inline-block
+    font-size: $font-size-paragraph-h2
     letter-spacing: 1rem
     text-transform: uppercase
     font-weight: 800
     background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0%, rgba($color-brown-dark, 0.70) 100%)
     -webkit-background-clip: text 
     color: transparent 
+    transition: all .4s
+    backface-visibility: hidden
+    &:hover 
+        transform: skewY(2deg) skewX(15deg) scale(1.1)
+        text-shadow: $shadow-h2
+
+.title-third
+    font-size: $font-size-paragraph-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700 
+
+.paragraph-about
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+    line-height: 140%
+    font-weight: 400 
 
 
