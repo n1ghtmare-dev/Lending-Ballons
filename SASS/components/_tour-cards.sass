@@ -4,6 +4,8 @@
     -moz-perspective: 150rem
     position: relative
     &__side
+        border-radius: 1.5rem
+        overflow: hidden   
         height: 50rem
         transition: 1s all ease-out
         color: white
@@ -13,12 +15,11 @@
         width: 100%
         backface-visibility: hidden
         box-shadow: $box-shadow
-        border-radius: 1.5rem
         &_front
             background: $color-white
         &_back
             transform: rotateY(180deg)
-            background: linear-gradient(130deg, rgba($color-brown-light, 0.70) 0%, rgba($color-brown-dark, 0.70) 100%)
+            background: linear-gradient(230deg, $color-brown-light, $color-brown-dark)
     
     &:hover &__side_front
         transform: rotateY(-180deg)
@@ -29,8 +30,13 @@
         border-radius: 1.5rem
         background-blend-mode: hard-light
         height: 21rem
-        background: $color-brown-light url("../img/card-1.png") center / cover no-repeat
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        &_1
+            background: $color-brown-light url("../img/card-1.png") center / cover no-repeat
+        &_2
+            background: $color-brown-light url("../img/card-2.png") center / cover no-repeat
+        &_3
+            background: $color-brown-light url("../img/card-3.png") center / cover no-repeat
     &__title
         font-size: 2.8rem
         letter-spacing: .2rem
@@ -46,7 +52,7 @@
         &_1
         &_2
             position: absolute
-            top: 3.6rem
+            top: 3.4rem
             right: 0
             padding-bottom: 1rem
     &__descr
@@ -54,12 +60,30 @@
             list-style: none
             margin: 0 auto 
             width: 75%
+            text-align: center
             li
                 font-size: $font-size-paragraph
                 letter-spacing: .2rem
                 color: $color-gray
                 border-bottom: 1px solid $color-gray
-                text-align: center
+                display: inline-block
                 &:not(:last-child)
                     margin-bottom: 2rem
+    &__backSide-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__text
+        margin-bottom: 8rem
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        color: $color-white
+        &_1
+            font-size: $font-size-paragraph
+            font-weight: 300
+        &_2
+            font-size: 6rem
+            font-weight: 500
 
