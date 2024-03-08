@@ -3,6 +3,8 @@
     perspective: 150rem
     -moz-perspective: 150rem
     position: relative
+    @include respond(tab-port)
+        height: auto
     &__side
         border-radius: 1.5rem
         overflow: hidden   
@@ -15,14 +17,29 @@
         width: 100%
         backface-visibility: hidden
         box-shadow: $box-shadow
+        @include respond(tab-port)
+            height: auto
+            position: relative
         &_front
             background: $color-white
+            @include respond(tab-port)
+                padding-bottom: 12rem
         &_back
             transform: rotateY(180deg)
             background: linear-gradient(230deg, $color-brown-light, $color-brown-dark)
+            @include respond(tab-port)
+                transform: rotateY(0deg)
+                margin-top: -11rem
+                padding: 5rem
+                padding-top: 12rem
+                clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+
+
     
     &:hover &__side_front
         transform: rotateY(-180deg)
+        @include respond(tab-port)
+            transform: rotate(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
 
@@ -37,6 +54,9 @@
             background: $color-brown-light url("../img/card-2.png") center / cover no-repeat
         &_3
             background: $color-brown-light url("../img/card-3.png") center / cover no-repeat
+        @include respond(tab-port)
+            height: 30rem
+        
     &__title
         font-size: 2.8rem
         letter-spacing: .2rem
@@ -46,6 +66,9 @@
         position: absolute
         top: 17rem
         right: 0rem
+        @include respond(tab-port)
+            top: 25rem
+            font-size: 3.8rem
     &__span
         background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
         padding: 1rem 2rem .3rem 2rem
@@ -55,6 +78,8 @@
             top: 3.4rem
             right: 0
             padding-bottom: 1rem
+            @include respond(tab-port)
+                top: 4.4rem
     &__descr
         ul
             list-style: none
@@ -69,11 +94,22 @@
                 display: inline-block
                 &:not(:last-child)
                     margin-bottom: 2rem
+                @include respond(tab-land)
+                    font-size: 1.5rem
+                @include respond(tab-port)
+                    font-size: 2rem
+
     &__backSide-box
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+        @include respond(tab-port)
+            position: relative
+            top: 0
+            left: 0
+            transform: translate(0, 0)
+            text-align: center
     &__text
         margin-bottom: 8rem
         letter-spacing: .2rem

@@ -2,7 +2,7 @@
 // Main button
     
 .btn
-    &:link, &:visited
+    &, &:link, &:visited
         @include style-link($color-brown-dark)
         font-size: 2rem
         padding: 1.5rem 4rem
@@ -10,6 +10,12 @@
         border-radius: 5rem
         transition: all .5s
         position: relative
+        border: none
+        @include respond(tab-land)
+            font-size: 1.8rem
+            padding: 1.5rem 3.7rem
+        @include respond(tab-port)
+            padding: 2rem 5rem
     &:hover
         transform: translateY(-.4rem)
         box-shadow: $box-shadow
@@ -34,3 +40,11 @@
     &_animated
         animation: btnToUp 1s ease-out .5s
         animation-fill-mode: backwards
+
+.btn_brown
+    &, &:link, &:visited
+        background: $color-brown-dark
+        color: $color-white
+    &:hover
+    &::after
+        background: $color-brown-dark

@@ -9,6 +9,24 @@
 </head>
 <body>
     <div class="container">
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__toggle" id="navi-toggle"> 
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__background"></div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">о нас</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">скидки</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">лучшие туры</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">калькулятор цены</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">связаться с нами</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <header class="header">
             <img src="img/icon.svg" alt="Логотип воздушный шар" class="header__logo">
             <div class="header__box">
@@ -44,7 +62,7 @@
                             Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.                        
                         </p>
 
-                        <a href="#" class="btn-text margin-bottom-200px">Узнать больше &rarr;</a>
+                        <a href="#" class="btn-text">Узнать больше &rarr;</a>
 
                         </div>
                     <div class="col-1-of-2">
@@ -241,12 +259,59 @@
             <section class="section-book">
                 <div class="row">
                     <div class="book">
-
+                        <div class="book__form">
+                            <form action="#" class="form">
+                                <div class="align-item-center margin-bottom-30px">
+                                    <h2 class="title-secondary">
+                                    Забронировать тур
+                                    </h2>
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Имя Фамилия" id="name" required>
+                                    <label for="name" class="form__label">Ваше имя и фамилия</label>
+                                </div>
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Ваш email" id="email" required>
+                                    <label for="name" class="form__label">Ваш email</label>
+                                </div>
+                                
+                                <div class="form__group">
+                                    <div class="form__group-radio">
+                                        <input type="radio" class="form__input-radio" id="tour-1" name="checked">
+                                        <label for="tour-1" class="form__label-radio">
+                                            <span class="form__button-radio"></span>
+                                            Групповой тур</label>
+                                    </div>
+                                    <div class="form__group-radio">
+                                        <input type="radio" class="form__input-radio" id="tour-2" name="checked">
+                                        <label for="tour-2" class="form__label-radio">
+                                            <span class="form__button-radio"></span>
+                                            Индивидуальный тур</label>
+                                    </div>
+                                </div>
+                                <div class="from__group">
+                                    <button class="btn btn_brown">Забронировать</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
-
         </main>
+        <footer class="footer">
+            <div class="row align-item-center">
+                <a href="#"><img src="img/icon.svg" alt="logo" class="footer__logo"></a>
+            </div>
+            <div class="row">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">о нас</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">скидки</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">лучшие туры</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">калькулятор цен</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">связаться с нами</a></li>
+                </ul>
+            </div>
+        </footer>
 
     </div>
 
